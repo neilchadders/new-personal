@@ -1,17 +1,17 @@
 
 function setupTypewriter(t) {
-    var HTML = t.innerHTML;
+    const HTML = t.innerHTML;  // initialise t to empty string
 
     t.innerHTML = "";
 
-    var cursorPosition = 0,
+    let cursorPosition = 0,
         tag = "",
         writingTag = false,
         tagOpen = false,
-        typeSpeed = 100,
+        typeSpeed = 100, // speed in ms
         tempTypeSpeed = 0;
 
-    var type = function () {
+    const type = function () {
 
         if (writingTag === true) {
             tag += HTML[cursorPosition];
