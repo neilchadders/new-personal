@@ -19,6 +19,8 @@ body {
 #links {
     text-align: center;
     margin-top: 18%;
+    animation-name: test;
+    animation-duration: 100s;
 
 }
 
@@ -62,6 +64,16 @@ body {
 }
 
 @keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes test {
     0% {
         opacity: 0;
     }
