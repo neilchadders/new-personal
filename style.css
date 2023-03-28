@@ -1,5 +1,25 @@
 body {
     background-color: black;
+
+}
+
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    color: aliceblue;
+    margin-top: 2%;
+    font-size: 2em;
+    font-family: "Courier New";
+    font-weight: 900;
+
+}
+
+#links {
+    text-align: center;
+    margin-top: 18%;
+
 }
 
 .var-highlight {
@@ -11,16 +31,10 @@ body {
 }
 
 #object {
-    position: absolute;
-    margin-top: 5%;
-    color: aliceblue;
+    margin-top: 12%;
 }
 
-#typewriter {
-    font-size: 2em;
-    margin: 0;
-    font-family: "Courier New";
-}
+#typewriter {}
 
 #typewriter:after {
     content: "|";

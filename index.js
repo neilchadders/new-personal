@@ -1,23 +1,23 @@
 
-function setupTypewriter(t) {
-    const HTML = t.innerHTML;  // initialise t to empty string
+function setupTypewriter(t) { // t = html element 
+    const HTML = t.innerHTML;
 
-    t.innerHTML = "";
+    t.innerHTML = ""; // initialise t to empty string
 
-    let cursorPosition = 0,
-        tag = "",
-        writingTag = false,
-        tagOpen = false,
+    let cursorPosition = 0, // current position of cursor ie index of HTML string
+        tag = "", // stores HTMl tag
+        writingTag = false, // Keep check if current character is part of html tag
+        tagOpen = false, // Is current tag open?
         typeSpeed = 100, // speed in ms
         tempTypeSpeed = 0;
 
     const type = function () {
 
         if (writingTag === true) {
-            tag += HTML[cursorPosition];
+            tag += HTML[cursorPosition]; //checks if the current character is part of an HTML tag, if so, it adds the character to the tag variable
         }
 
-        if (HTML[cursorPosition] === "<") {
+        if (HTML[cursorPosition] === "<") { // If the character is a < symbol, type() checks whether the tag is being opened or closed, and sets the tagOpen and writingTag variables. If tag is not being written but is still open, type() appends the current character to the tag's innerHTML.
             tempTypeSpeed = 0;
             if (tagOpen) {
                 tagOpen = false;
@@ -41,7 +41,7 @@ function setupTypewriter(t) {
             }
             t.innerHTML += HTML[cursorPosition];
         }
-        if (writingTag === true && HTML[cursorPosition] === ">") {
+        if (writingTag === true && HTML[cursorPosition] === ">") { // creates new span element ifclosing tag
             tempTypeSpeed = (Math.random() * typeSpeed) + 50;
             writingTag = false;
             if (tagOpen) {
@@ -52,7 +52,7 @@ function setupTypewriter(t) {
             }
         }
 
-        cursorPosition += 1;
+        cursorPosition += 1; //increments cursor position
         if (cursorPosition < HTML.length - 1) {
             setTimeout(type, tempTypeSpeed);
         }
