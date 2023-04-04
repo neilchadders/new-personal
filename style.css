@@ -3,8 +3,12 @@ body {
     background-color: black;
 }
 
+#first-page {
+    height: 100%;
+}
+
 #title {
-    background-color: white;
+    background-color: #FAF9F6;
     height: 120px;
     font-weight: 700;
     font-family: "Courier New";
@@ -21,6 +25,7 @@ body {
     color: aliceblue;
     font-family: "Courier New";
 
+
 }
 
 /*Links*/
@@ -32,6 +37,18 @@ body {
     font-weight: 600;
     color: #C0AD60;
 
+
+
+}
+
+.link-hov {
+    transition: all .2s ease-in-out;
+
+}
+
+.link-hov:hover {
+    transform: scale(1.1);
+
 }
 
 
@@ -40,8 +57,6 @@ body {
     margin-top: 110px;
     text-align: left;
     font-size: 2em;
-    font-weight: 400;
-
 
 }
 
@@ -60,6 +75,16 @@ body {
     animation: blink 300ms linear infinite alternate;
 }
 
+#about {
+    text-align: center;
+    padding: 10%;
+    color: aliceblue;
+    font: 300;
+
+    font-family: "Courier New";
+}
+
+
 @-webkit-keyframes blink {
     0% {
         opacity: 0;
@@ -68,6 +93,14 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+#about {
+    color: white;
+}
+
+.lorem {
+    color: antiquewhite;
 }
 
 @-moz-keyframes blink {
