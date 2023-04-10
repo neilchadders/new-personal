@@ -8,7 +8,7 @@ function setupTypewriter(t) { // t = html element
         tag = "", // stores HTMl tag
         writingTag = false, // Keep check if current character is part of html tag
         tagOpen = false, // Is current tag open?
-        typeSpeed = 100, // speed in ms
+        typeSpeed = 0, // speed in ms
         tempTypeSpeed = 0;
 
     const type = function () {
